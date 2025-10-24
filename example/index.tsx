@@ -6,8 +6,9 @@ import { Leva } from "leva";
 import { EcctrlJoystick } from "../src/EcctrlJoystick";
 import { Suspense, useEffect, useState } from "react";
 import { Bvh } from "@react-three/drei";
+import React from "react";
 
-const root = ReactDOM.createRoot(document.querySelector("#root"));
+const root = ReactDOM.createRoot(document.querySelector("#root") as HTMLElement);
 
 const EcctrlJoystickControls = () => {
   const [isTouchScreen, setIsTouchScreen] = useState(false)
@@ -40,7 +41,7 @@ root.render(
       }}
       onPointerDown={(e) => {
         if (e.pointerType === 'mouse') {
-          e.target.requestPointerLock()
+          (e.target as HTMLElement).requestPointerLock()
         }
       }}
     >
