@@ -1,0 +1,409 @@
+{
+  "mapId": "25",
+  "npcUnlockMode": "independent",
+  "environment": {
+    "skybox": {
+      "type": "gradient",
+      "colors": [
+        "#87CEEB",
+        "#E0F6FF"
+      ]
+    },
+    "lighting": {
+      "ambient": {
+        "intensity": 0.4,
+        "color": "#ffffff"
+      },
+      "directional": {
+        "intensity": 0.8,
+        "color": "#ffffff",
+        "position": [
+          10,
+          10,
+          5
+        ],
+        "castShadow": true
+      }
+    },
+    "fog": {
+      "enabled": false,
+      "color": "#87CEEB",
+      "near": 50,
+      "far": 200
+    }
+  },
+  "terrain": {
+    "ground": {
+      "type": "plane",
+      "size": [
+        300,
+        5,
+        300
+      ],
+      "position": [
+        0,
+        -3.5,
+        0
+      ],
+      "material": {
+        "type": "standard",
+        "color": "#8FBC8F"
+      },
+      "textureUrl": "/textures/grass_green.png"
+    },
+    "obstacles": [
+      {
+        "id": "obstacle1",
+        "type": "cube",
+        "position": [
+          10,
+          0,
+          10
+        ],
+        "size": [
+          2,
+          2,
+          2
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#8B4513",
+          "roughness": 0.9
+        }
+      },
+      {
+        "id": "obstacle2",
+        "type": "sphere",
+        "position": [
+          -10,
+          0,
+          -10
+        ],
+        "radius": 1.5,
+        "material": {
+          "type": "standard",
+          "color": "#4682B4",
+          "roughness": 0.3
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "platform1",
+        "type": "floating",
+        "position": [
+          6,
+          -1.1,
+          20
+        ],
+        "size": [
+          20,
+          0.5,
+          8
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#00f2ff",
+          "roughness": 0.5
+        }
+      },
+      {
+        "id": "platform2",
+        "type": "floating",
+        "position": [
+          6,
+          -1.15,
+          20
+        ],
+        "size": [
+          22,
+          0.5,
+          10
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#c29967",
+          "roughness": 0.5
+        }
+      }
+    ],
+    "objects": [
+      {
+        "id": "object1",
+        "type": "house",
+        "position": [
+          -10,
+          2,
+          10
+        ],
+        "scale": 5,
+        "modelURL": "/house.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "object2",
+        "type": "tree",
+        "position": [
+          -4,
+          5,
+          10
+        ],
+        "scale": 5,
+        "modelURL": "/tree.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "object3",
+        "type": "surfboard",
+        "position": [
+          -6.65,
+          -0.6,
+          20
+        ],
+        "scale": 0.1,
+        "modelURL": "/surfboard.glb",
+        "rotation": [
+          1.57,
+          0.9,
+          0
+        ]
+      },
+      {
+        "id": "object4",
+        "type": "umbrella",
+        "position": [
+          -7,
+          0,
+          20
+        ],
+        "scale": 5,
+        "modelURL": "/umbrella.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "npcs": [
+    {
+      "id": "npc_25_1",
+      "name": "Isaac",
+      "connectionId": "agonizes",
+      "dialogId": "dialog_25_1",
+      "position": [
+        -8,
+        0,
+        -11
+      ],
+      "route": [
+        [
+          17,
+          0,
+          10
+        ],
+        [
+          8,
+          0,
+          7
+        ],
+        [
+          -9,
+          0,
+          -29
+        ],
+        [
+          23,
+          0,
+          14
+        ]
+      ],
+      "text": "Hello! I'm an explorer of LSD!",
+      "color": "#aeeef7",
+      "modelURL": "/persons/BaseCharacter.gltf",
+      "map": 25,
+      "prerequisiteNpcId": null,
+      "unlocksMapId": "3"
+    },
+    {
+      "id": "npc_25_2",
+      "name": "Zoey",
+      "connectionId": "associated_with",
+      "dialogId": "dialog_25_2",
+      "position": [
+        -16,
+        0,
+        -5
+      ],
+      "route": [
+        [
+          12,
+          0,
+          20
+        ],
+        [
+          28,
+          0,
+          2
+        ],
+        [
+          18,
+          0,
+          -5
+        ],
+        [
+          7,
+          0,
+          22
+        ]
+      ],
+      "text": "Hello! I'm an explorer of LSD!",
+      "color": "#d755d2",
+      "modelURL": "/persons/BlueSoldier_Male.gltf",
+      "map": 25,
+      "prerequisiteNpcId": "npc_25_1",
+      "unlocksMapId": "19"
+    },
+    {
+      "id": "npc_25_3",
+      "name": "Grayson",
+      "connectionId": "used_in",
+      "dialogId": "dialog_25_3",
+      "position": [
+        11,
+        0,
+        -6
+      ],
+      "route": [
+        [
+          26,
+          0,
+          -10
+        ],
+        [
+          -2,
+          0,
+          -8
+        ],
+        [
+          24,
+          0,
+          -8
+        ],
+        [
+          22,
+          0,
+          25
+        ]
+      ],
+      "text": "Hello! I'm an explorer of LSD!",
+      "color": "#b60820",
+      "modelURL": "/persons/Casual2_Male.gltf",
+      "map": 25,
+      "prerequisiteNpcId": "npc_25_2",
+      "unlocksMapId": "31"
+    },
+    {
+      "id": "npc_25_4",
+      "name": "Penelope",
+      "connectionId": "causes",
+      "dialogId": "dialog_25_4",
+      "position": [
+        -1,
+        0,
+        -4
+      ],
+      "route": [
+        [
+          -29,
+          0,
+          22
+        ],
+        [
+          -4,
+          0,
+          26
+        ],
+        [
+          26,
+          0,
+          27
+        ],
+        [
+          15,
+          0,
+          -5
+        ]
+      ],
+      "text": "Hello! I'm an explorer of LSD!",
+      "color": "#79ce47",
+      "modelURL": "/persons/Casual3_Female.gltf",
+      "map": 25,
+      "prerequisiteNpcId": "npc_25_3",
+      "unlocksMapId": "49"
+    },
+    {
+      "id": "npc_25_5",
+      "name": "Julian",
+      "connectionId": "revived_in",
+      "dialogId": "dialog_25_5",
+      "position": [
+        -9,
+        0,
+        4
+      ],
+      "route": [
+        [
+          9,
+          0,
+          30
+        ],
+        [
+          8,
+          0,
+          4
+        ],
+        [
+          -29,
+          0,
+          -29
+        ],
+        [
+          -27,
+          0,
+          -6
+        ]
+      ],
+      "text": "Hello! I'm an explorer of LSD!",
+      "color": "#ce7c14",
+      "modelURL": "/persons/Casual3_Male.gltf",
+      "map": 25,
+      "prerequisiteNpcId": "npc_25_4",
+      "unlocksMapId": "39"
+    }
+  ],
+  "playerStartPosition": [
+    0,
+    1,
+    0
+  ],
+  "cameraStartPosition": [
+    0,
+    5,
+    10
+  ],
+  "cameraStartTarget": [
+    0,
+    1,
+    0
+  ]
+}

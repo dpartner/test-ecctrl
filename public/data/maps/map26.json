@@ -1,0 +1,278 @@
+{
+  "mapId": "26",
+  "npcUnlockMode": "independent",
+  "environment": {
+    "skybox": {
+      "type": "gradient",
+      "colors": [
+        "#FF6B6B",
+        "#4ECDC4"
+      ]
+    },
+    "lighting": {
+      "ambient": {
+        "intensity": 0.3,
+        "color": "#ffffff"
+      },
+      "directional": {
+        "intensity": 1,
+        "color": "#FFD93D",
+        "position": [
+          15,
+          15,
+          10
+        ],
+        "castShadow": true
+      }
+    },
+    "fog": {
+      "enabled": true,
+      "color": "#FF6B6B",
+      "near": 30,
+      "far": 150
+    }
+  },
+  "terrain": {
+    "ground": {
+      "type": "plane",
+      "size": [
+        300,
+        5,
+        300
+      ],
+      "position": [
+        0,
+        -3.5,
+        0
+      ],
+      "material": {
+        "type": "standard",
+        "color": "#556B2F",
+        "roughness": 0.9,
+        "metalness": 0.2
+      },
+      "textureUrl": "/textures/grass_green.png"
+    },
+    "obstacles": [
+      {
+        "id": "obstacle1_map2",
+        "type": "cylinder",
+        "position": [
+          13,
+          0,
+          20
+        ],
+        "radius": 2,
+        "height": 4,
+        "material": {
+          "type": "standard",
+          "color": "#ff0000",
+          "roughness": 0.7
+        }
+      },
+      {
+        "id": "obstacle2_map2",
+        "type": "torus",
+        "position": [
+          -8,
+          -0.5,
+          -10
+        ],
+        "radius": 3,
+        "tube": 0.5,
+        "material": {
+          "type": "standard",
+          "color": "#00ff00",
+          "roughness": 0.4
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "platform1_map2",
+        "type": "moving",
+        "position": [
+          -10,
+          0,
+          25
+        ],
+        "size": [
+          10,
+          0.5,
+          10
+        ],
+        "movement": {
+          "type": "vertical",
+          "range": [
+            2,
+            8
+          ],
+          "speed": 1
+        },
+        "material": {
+          "type": "standard",
+          "color": "#00ff00",
+          "roughness": 0.6
+        }
+      },
+      {
+        "id": "platform2_map2",
+        "type": "rotating",
+        "position": [
+          14,
+          0,
+          0
+        ],
+        "size": [
+          6,
+          0.5,
+          6
+        ],
+        "rotation": {
+          "axis": "y",
+          "speed": 0.5
+        },
+        "material": {
+          "type": "standard",
+          "color": "#ff0000",
+          "roughness": 0.5
+        }
+      }
+    ],
+    "objects": []
+  },
+  "npcs": [
+    {
+      "id": "npc_26_1",
+      "name": "Clara",
+      "connectionId": "used_in",
+      "dialogId": "dialog_26_1",
+      "position": [
+        -19,
+        0,
+        -14
+      ],
+      "route": [
+        [
+          15,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          -30
+        ],
+        [
+          -16,
+          0,
+          0
+        ],
+        [
+          -30,
+          0,
+          20
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Lophophora williamsii!",
+      "color": "#68457b",
+      "modelURL": "/persons/BaseCharacter.gltf",
+      "map": 26,
+      "prerequisiteNpcId": null,
+      "unlocksMapId": "20"
+    },
+    {
+      "id": "npc_26_2",
+      "name": "John",
+      "connectionId": "used_in",
+      "dialogId": "dialog_26_2",
+      "position": [
+        -7,
+        0,
+        7
+      ],
+      "route": [
+        [
+          -6,
+          0,
+          0
+        ],
+        [
+          15,
+          0,
+          -22
+        ],
+        [
+          8,
+          0,
+          -4
+        ],
+        [
+          20,
+          0,
+          -5
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Lophophora williamsii!",
+      "color": "#e51ff5",
+      "modelURL": "/persons/BlueSoldier_Male.gltf",
+      "map": 26,
+      "prerequisiteNpcId": "npc_26_1",
+      "unlocksMapId": "23"
+    },
+    {
+      "id": "npc_26_3",
+      "name": "Lucy",
+      "connectionId": "both_lysergamides",
+      "dialogId": "dialog_26_3",
+      "position": [
+        1,
+        0,
+        -6
+      ],
+      "route": [
+        [
+          7,
+          0,
+          17
+        ],
+        [
+          -23,
+          0,
+          21
+        ],
+        [
+          -13,
+          0,
+          -2
+        ],
+        [
+          -19,
+          0,
+          12
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Lophophora williamsii!",
+      "color": "#06ac11",
+      "modelURL": "/persons/Casual2_Male.gltf",
+      "map": 26,
+      "prerequisiteNpcId": "npc_26_2",
+      "unlocksMapId": "5"
+    }
+  ],
+  "playerStartPosition": [
+    0,
+    1,
+    0
+  ],
+  "cameraStartPosition": [
+    0,
+    5,
+    10
+  ],
+  "cameraStartTarget": [
+    0,
+    1,
+    0
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "mapId": "14",
+  "npcUnlockMode": "independent",
+  "environment": {
+    "skybox": {
+      "type": "gradient",
+      "colors": [
+        "#FF6B6B",
+        "#4ECDC4"
+      ]
+    },
+    "lighting": {
+      "ambient": {
+        "intensity": 0.3,
+        "color": "#ffffff"
+      },
+      "directional": {
+        "intensity": 1,
+        "color": "#FFD93D",
+        "position": [
+          15,
+          15,
+          10
+        ],
+        "castShadow": true
+      }
+    },
+    "fog": {
+      "enabled": true,
+      "color": "#FF6B6B",
+      "near": 30,
+      "far": 150
+    }
+  },
+  "terrain": {
+    "ground": {
+      "type": "plane",
+      "size": [
+        300,
+        5,
+        300
+      ],
+      "position": [
+        0,
+        -3.5,
+        0
+      ],
+      "material": {
+        "type": "standard",
+        "color": "#556B2F",
+        "roughness": 0.9,
+        "metalness": 0.2
+      },
+      "textureUrl": "/textures/grass_green.png"
+    },
+    "obstacles": [
+      {
+        "id": "obstacle1_map2",
+        "type": "cylinder",
+        "position": [
+          13,
+          0,
+          20
+        ],
+        "radius": 2,
+        "height": 4,
+        "material": {
+          "type": "standard",
+          "color": "#ff0000",
+          "roughness": 0.7
+        }
+      },
+      {
+        "id": "obstacle2_map2",
+        "type": "torus",
+        "position": [
+          -8,
+          -0.5,
+          -10
+        ],
+        "radius": 3,
+        "tube": 0.5,
+        "material": {
+          "type": "standard",
+          "color": "#00ff00",
+          "roughness": 0.4
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "platform1_map2",
+        "type": "moving",
+        "position": [
+          -10,
+          0,
+          25
+        ],
+        "size": [
+          10,
+          0.5,
+          10
+        ],
+        "movement": {
+          "type": "vertical",
+          "range": [
+            2,
+            8
+          ],
+          "speed": 1
+        },
+        "material": {
+          "type": "standard",
+          "color": "#00ff00",
+          "roughness": 0.6
+        }
+      },
+      {
+        "id": "platform2_map2",
+        "type": "rotating",
+        "position": [
+          14,
+          0,
+          0
+        ],
+        "size": [
+          6,
+          0.5,
+          6
+        ],
+        "rotation": {
+          "axis": "y",
+          "speed": 0.5
+        },
+        "material": {
+          "type": "standard",
+          "color": "#ff0000",
+          "roughness": 0.5
+        }
+      }
+    ],
+    "objects": []
+  },
+  "npcs": [
+    {
+      "id": "npc_14_1",
+      "name": "Chloe",
+      "connectionId": "contains",
+      "dialogId": "dialog_14_1",
+      "position": [
+        17,
+        0,
+        -5
+      ],
+      "route": [
+        [
+          -29,
+          0,
+          -8
+        ],
+        [
+          20,
+          0,
+          22
+        ],
+        [
+          21,
+          0,
+          22
+        ],
+        [
+          1,
+          0,
+          -28
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Diplopterys cabrerana!",
+      "color": "#d07b0d",
+      "modelURL": "/persons/BaseCharacter.gltf",
+      "map": 14,
+      "prerequisiteNpcId": null,
+      "unlocksMapId": "10"
+    },
+    {
+      "id": "npc_14_2",
+      "name": "Wyatt",
+      "connectionId": "combined_with",
+      "dialogId": "dialog_14_2",
+      "position": [
+        -7,
+        0,
+        17
+      ],
+      "route": [
+        [
+          3,
+          0,
+          -5
+        ],
+        [
+          -12,
+          0,
+          -27
+        ],
+        [
+          15,
+          0,
+          -20
+        ],
+        [
+          9,
+          0,
+          29
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Diplopterys cabrerana!",
+      "color": "#f31c28",
+      "modelURL": "/persons/BlueSoldier_Male.gltf",
+      "map": 14,
+      "prerequisiteNpcId": "npc_14_1",
+      "unlocksMapId": "8"
+    }
+  ],
+  "playerStartPosition": [
+    0,
+    1,
+    0
+  ],
+  "cameraStartPosition": [
+    0,
+    5,
+    10
+  ],
+  "cameraStartTarget": [
+    0,
+    1,
+    0
+  ]
+}

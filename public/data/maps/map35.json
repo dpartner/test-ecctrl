@@ -1,0 +1,239 @@
+{
+  "mapId": "35",
+  "npcUnlockMode": "independent",
+  "environment": {
+    "skybox": {
+      "type": "gradient",
+      "colors": [
+        "#FF6B6B",
+        "#4ECDC4"
+      ]
+    },
+    "lighting": {
+      "ambient": {
+        "intensity": 0.3,
+        "color": "#ffffff"
+      },
+      "directional": {
+        "intensity": 1,
+        "color": "#FFD93D",
+        "position": [
+          15,
+          15,
+          10
+        ],
+        "castShadow": true
+      }
+    },
+    "fog": {
+      "enabled": true,
+      "color": "#FF6B6B",
+      "near": 30,
+      "far": 150
+    }
+  },
+  "terrain": {
+    "ground": {
+      "type": "plane",
+      "size": [
+        300,
+        5,
+        300
+      ],
+      "position": [
+        0,
+        -3.5,
+        0
+      ],
+      "material": {
+        "type": "standard",
+        "color": "#556B2F",
+        "roughness": 0.9,
+        "metalness": 0.2
+      },
+      "textureUrl": "/textures/grass_green.png"
+    },
+    "obstacles": [
+      {
+        "id": "obstacle1_map2",
+        "type": "cylinder",
+        "position": [
+          13,
+          0,
+          20
+        ],
+        "radius": 2,
+        "height": 4,
+        "material": {
+          "type": "standard",
+          "color": "#ff0000",
+          "roughness": 0.7
+        }
+      },
+      {
+        "id": "obstacle2_map2",
+        "type": "torus",
+        "position": [
+          -8,
+          -0.5,
+          -10
+        ],
+        "radius": 3,
+        "tube": 0.5,
+        "material": {
+          "type": "standard",
+          "color": "#00ff00",
+          "roughness": 0.4
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "platform1_map2",
+        "type": "moving",
+        "position": [
+          -10,
+          0,
+          25
+        ],
+        "size": [
+          10,
+          0.5,
+          10
+        ],
+        "movement": {
+          "type": "vertical",
+          "range": [
+            2,
+            8
+          ],
+          "speed": 1
+        },
+        "material": {
+          "type": "standard",
+          "color": "#00ff00",
+          "roughness": 0.6
+        }
+      },
+      {
+        "id": "platform2_map2",
+        "type": "rotating",
+        "position": [
+          14,
+          0,
+          0
+        ],
+        "size": [
+          6,
+          0.5,
+          6
+        ],
+        "rotation": {
+          "axis": "y",
+          "speed": 0.5
+        },
+        "material": {
+          "type": "standard",
+          "color": "#ff0000",
+          "roughness": 0.5
+        }
+      }
+    ],
+    "objects": []
+  },
+  "npcs": [
+    {
+      "id": "npc_35_1",
+      "name": "Jack",
+      "connectionId": "contains",
+      "dialogId": "dialog_35_1",
+      "position": [
+        12,
+        0,
+        5
+      ],
+      "route": [
+        [
+          -10,
+          0,
+          19
+        ],
+        [
+          -9,
+          0,
+          -13
+        ],
+        [
+          -8,
+          0,
+          1
+        ],
+        [
+          -22,
+          0,
+          0
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Peganum harmala!",
+      "color": "#09c879",
+      "modelURL": "/persons/BaseCharacter.gltf",
+      "map": 35,
+      "prerequisiteNpcId": null,
+      "unlocksMapId": "21"
+    },
+    {
+      "id": "npc_35_2",
+      "name": "Emily",
+      "connectionId": "contains",
+      "dialogId": "dialog_35_2",
+      "position": [
+        5,
+        0,
+        9
+      ],
+      "route": [
+        [
+          -20,
+          0,
+          9
+        ],
+        [
+          7,
+          0,
+          -29
+        ],
+        [
+          16,
+          0,
+          4
+        ],
+        [
+          18,
+          0,
+          7
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Peganum harmala!",
+      "color": "#c67e76",
+      "modelURL": "/persons/BlueSoldier_Male.gltf",
+      "map": 35,
+      "prerequisiteNpcId": "npc_35_1",
+      "unlocksMapId": "22"
+    }
+  ],
+  "playerStartPosition": [
+    0,
+    1,
+    0
+  ],
+  "cameraStartPosition": [
+    0,
+    5,
+    10
+  ],
+  "cameraStartTarget": [
+    0,
+    1,
+    0
+  ]
+}

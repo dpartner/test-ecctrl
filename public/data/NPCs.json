@@ -1,0 +1,31 @@
+{
+  "npcs": [
+    {
+      "name": "John",
+      "dialogId": "john",
+      "position": [4.1, 0, 3],
+      "route": [[17, 0, 3], [17, 0, 17], [-4, 0, 17], [-4, 0, 0]],
+      "text": "Hello! I'm John!",
+      "color": "#00ff00",
+      "modelURL": "/star_wars_1.glb"
+    },
+    {
+      "name": "Jane",
+      "dialogId": "jane",
+      "position": [-20, 0, 2],
+      "route": [[-10, 0, 0], [10, 0, -10], [0, 0, -10], [-10, 0, 0]],
+      "text": "Hello! I'm Jane!",
+      "color": "#0000ff",
+      "modelURL": "/star_wars_2.glb"
+    },
+    {
+      "name": "Jim",
+      "dialogId": "jim",
+      "position": [3.8, 0, 14],
+      "route": [[4, 0, 0], [15, 0, 3], [-6.5, 0, 3], [-6.5, 1.4, 10] ,[-6.5, 0, 18]],
+      "text": "Hello! I'm Jim!",
+      "color": "#ff0000",
+      "modelURL": "/star_wars_3.glb"
+    }
+  ] 
+}

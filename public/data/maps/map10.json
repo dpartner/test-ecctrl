@@ -1,0 +1,526 @@
+{
+  "mapId": "10",
+  "npcUnlockMode": "independent",
+  "environment": {
+    "skybox": {
+      "type": "gradient",
+      "colors": [
+        "#87CEEB",
+        "#E0F6FF"
+      ]
+    },
+    "lighting": {
+      "ambient": {
+        "intensity": 0.4,
+        "color": "#ffffff"
+      },
+      "directional": {
+        "intensity": 0.8,
+        "color": "#ffffff",
+        "position": [
+          10,
+          10,
+          5
+        ],
+        "castShadow": true
+      }
+    },
+    "fog": {
+      "enabled": false,
+      "color": "#87CEEB",
+      "near": 50,
+      "far": 200
+    }
+  },
+  "terrain": {
+    "ground": {
+      "type": "plane",
+      "size": [
+        300,
+        5,
+        300
+      ],
+      "position": [
+        0,
+        -3.5,
+        0
+      ],
+      "material": {
+        "type": "standard",
+        "color": "#8FBC8F"
+      },
+      "textureUrl": "/textures/grass_green.png"
+    },
+    "obstacles": [
+      {
+        "id": "obstacle1",
+        "type": "cube",
+        "position": [
+          10,
+          0,
+          10
+        ],
+        "size": [
+          2,
+          2,
+          2
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#8B4513",
+          "roughness": 0.9
+        }
+      },
+      {
+        "id": "obstacle2",
+        "type": "sphere",
+        "position": [
+          -10,
+          0,
+          -10
+        ],
+        "radius": 1.5,
+        "material": {
+          "type": "standard",
+          "color": "#4682B4",
+          "roughness": 0.3
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "platform1",
+        "type": "floating",
+        "position": [
+          6,
+          -1.1,
+          20
+        ],
+        "size": [
+          20,
+          0.5,
+          8
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#00f2ff",
+          "roughness": 0.5
+        }
+      },
+      {
+        "id": "platform2",
+        "type": "floating",
+        "position": [
+          6,
+          -1.15,
+          20
+        ],
+        "size": [
+          22,
+          0.5,
+          10
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#c29967",
+          "roughness": 0.5
+        }
+      }
+    ],
+    "objects": [
+      {
+        "id": "object1",
+        "type": "house",
+        "position": [
+          -10,
+          2,
+          10
+        ],
+        "scale": 5,
+        "modelURL": "/house.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "object2",
+        "type": "tree",
+        "position": [
+          -4,
+          5,
+          10
+        ],
+        "scale": 5,
+        "modelURL": "/tree.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "object3",
+        "type": "surfboard",
+        "position": [
+          -6.65,
+          -0.6,
+          20
+        ],
+        "scale": 0.1,
+        "modelURL": "/surfboard.glb",
+        "rotation": [
+          1.57,
+          0.9,
+          0
+        ]
+      },
+      {
+        "id": "object4",
+        "type": "umbrella",
+        "position": [
+          -7,
+          0,
+          20
+        ],
+        "scale": 5,
+        "modelURL": "/umbrella.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "npcs": [
+    {
+      "id": "npc_10_1",
+      "name": "Avery",
+      "connectionId": "agonizes",
+      "dialogId": "dialog_10_1",
+      "position": [
+        -20,
+        0,
+        17
+      ],
+      "route": [
+        [
+          29,
+          0,
+          4
+        ],
+        [
+          -15,
+          0,
+          -13
+        ],
+        [
+          -2,
+          0,
+          -3
+        ],
+        [
+          13,
+          0,
+          -13
+        ]
+      ],
+      "text": "Hello! I'm an explorer of DMT!",
+      "color": "#44bd5b",
+      "modelURL": "/persons/BaseCharacter.gltf",
+      "map": 10,
+      "prerequisiteNpcId": null,
+      "unlocksMapId": "45"
+    },
+    {
+      "id": "npc_10_2",
+      "name": "Joseph",
+      "connectionId": "enhances",
+      "dialogId": "dialog_10_2",
+      "position": [
+        -3,
+        0,
+        -9
+      ],
+      "route": [
+        [
+          -9,
+          0,
+          18
+        ],
+        [
+          12,
+          0,
+          20
+        ],
+        [
+          -24,
+          0,
+          20
+        ],
+        [
+          -21,
+          0,
+          29
+        ]
+      ],
+      "text": "Hello! I'm an explorer of DMT!",
+      "color": "#b29868",
+      "modelURL": "/persons/BlueSoldier_Male.gltf",
+      "map": 10,
+      "prerequisiteNpcId": "npc_10_1",
+      "unlocksMapId": "32"
+    },
+    {
+      "id": "npc_10_3",
+      "name": "Ella",
+      "connectionId": "related_compound",
+      "dialogId": "dialog_10_3",
+      "position": [
+        6,
+        0,
+        18
+      ],
+      "route": [
+        [
+          -27,
+          0,
+          -26
+        ],
+        [
+          -26,
+          0,
+          27
+        ],
+        [
+          14,
+          0,
+          3
+        ],
+        [
+          7,
+          0,
+          19
+        ]
+      ],
+      "text": "Hello! I'm an explorer of DMT!",
+      "color": "#51e7a3",
+      "modelURL": "/persons/Casual2_Male.gltf",
+      "map": 10,
+      "prerequisiteNpcId": "npc_10_2",
+      "unlocksMapId": "4"
+    },
+    {
+      "id": "npc_10_4",
+      "name": "Samuel",
+      "connectionId": "agonizes",
+      "dialogId": "dialog_10_4",
+      "position": [
+        -6,
+        0,
+        8
+      ],
+      "route": [
+        [
+          27,
+          0,
+          -27
+        ],
+        [
+          -10,
+          0,
+          -11
+        ],
+        [
+          -27,
+          0,
+          -26
+        ],
+        [
+          6,
+          0,
+          11
+        ]
+      ],
+      "text": "Hello! I'm an explorer of DMT!",
+      "color": "#3e2c59",
+      "modelURL": "/persons/Casual3_Female.gltf",
+      "map": 10,
+      "prerequisiteNpcId": "npc_10_3",
+      "unlocksMapId": "3"
+    },
+    {
+      "id": "npc_10_5",
+      "name": "Scarlett",
+      "connectionId": "endogenously_produced_in",
+      "dialogId": "dialog_10_5",
+      "position": [
+        13,
+        0,
+        -7
+      ],
+      "route": [
+        [
+          23,
+          0,
+          -26
+        ],
+        [
+          -20,
+          0,
+          -2
+        ],
+        [
+          19,
+          0,
+          -4
+        ],
+        [
+          11,
+          0,
+          -13
+        ]
+      ],
+      "text": "Hello! I'm an explorer of DMT!",
+      "color": "#dab815",
+      "modelURL": "/persons/Casual3_Male.gltf",
+      "map": 10,
+      "prerequisiteNpcId": "npc_10_4",
+      "unlocksMapId": "34"
+    },
+    {
+      "id": "npc_10_6",
+      "name": "David",
+      "connectionId": "both_tryptamines",
+      "dialogId": "dialog_10_6",
+      "position": [
+        -6,
+        0,
+        7
+      ],
+      "route": [
+        [
+          -25,
+          0,
+          -14
+        ],
+        [
+          -15,
+          0,
+          -28
+        ],
+        [
+          -5,
+          0,
+          9
+        ],
+        [
+          -25,
+          0,
+          14
+        ]
+      ],
+      "text": "Hello! I'm an explorer of DMT!",
+      "color": "#784563",
+      "modelURL": "/persons/Chef_Female.gltf",
+      "map": 10,
+      "prerequisiteNpcId": "npc_10_5",
+      "unlocksMapId": "4"
+    },
+    {
+      "id": "npc_10_7",
+      "name": "Grace",
+      "connectionId": "both_tryptamines",
+      "dialogId": "dialog_10_7",
+      "position": [
+        11,
+        0,
+        9
+      ],
+      "route": [
+        [
+          7,
+          0,
+          8
+        ],
+        [
+          -26,
+          0,
+          -5
+        ],
+        [
+          11,
+          0,
+          7
+        ],
+        [
+          -13,
+          0,
+          18
+        ]
+      ],
+      "text": "Hello! I'm an explorer of DMT!",
+      "color": "#930ed5",
+      "modelURL": "/persons/Cowboy_Female.gltf",
+      "map": 10,
+      "prerequisiteNpcId": "npc_10_6",
+      "unlocksMapId": "1"
+    },
+    {
+      "id": "npc_10_8",
+      "name": "Carter",
+      "connectionId": "associated_with",
+      "dialogId": "dialog_10_8",
+      "position": [
+        4,
+        0,
+        -9
+      ],
+      "route": [
+        [
+          18,
+          0,
+          -21
+        ],
+        [
+          -17,
+          0,
+          -28
+        ],
+        [
+          -13,
+          0,
+          -24
+        ],
+        [
+          -11,
+          0,
+          1
+        ]
+      ],
+      "text": "Hello! I'm an explorer of DMT!",
+      "color": "#a61670",
+      "modelURL": "/persons/Cowboy_Male.gltf",
+      "map": 10,
+      "prerequisiteNpcId": "npc_10_7",
+      "unlocksMapId": "19"
+    }
+  ],
+  "playerStartPosition": [
+    0,
+    1,
+    0
+  ],
+  "cameraStartPosition": [
+    0,
+    5,
+    10
+  ],
+  "cameraStartTarget": [
+    0,
+    1,
+    0
+  ]
+}

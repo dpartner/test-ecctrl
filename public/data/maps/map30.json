@@ -1,0 +1,521 @@
+{
+  "mapId": "30",
+  "npcUnlockMode": "sequential",
+  "environment": {
+    "skybox": {
+      "type": "gradient",
+      "colors": [
+        "#2C3E50",
+        "#E74C3C"
+      ]
+    },
+    "lighting": {
+      "ambient": {
+        "intensity": 0.2,
+        "color": "#ffffff"
+      },
+      "directional": {
+        "intensity": 1.2,
+        "color": "#F39C12",
+        "position": [
+          20,
+          20,
+          15
+        ],
+        "castShadow": true
+      },
+      "point": {
+        "intensity": 0.8,
+        "color": "#E74C3C",
+        "position": [
+          0,
+          10,
+          0
+        ],
+        "distance": 50
+      }
+    },
+    "fog": {
+      "enabled": true,
+      "color": "#2C3E50",
+      "near": 20,
+      "far": 100
+    }
+  },
+  "terrain": {
+    "ground": {
+      "type": "plane",
+      "size": [
+        300,
+        5,
+        300
+      ],
+      "position": [
+        0,
+        -3.5,
+        0
+      ],
+      "material": {
+        "type": "standard",
+        "color": "#34495E",
+        "roughness": 1,
+        "metalness": 0.3
+      },
+      "textureUrl": "/textures/grass_green.png"
+    },
+    "obstacles": [
+      {
+        "id": "obstacle1_map3",
+        "type": "octahedron",
+        "position": [
+          20,
+          0,
+          20
+        ],
+        "size": 3,
+        "material": {
+          "type": "standard",
+          "color": "#E74C3C",
+          "roughness": 0.2,
+          "metalness": 0.8
+        }
+      },
+      {
+        "id": "obstacle2_map3",
+        "type": "dodecahedron",
+        "position": [
+          -20,
+          0,
+          -20
+        ],
+        "size": 2.5,
+        "material": {
+          "type": "standard",
+          "color": "#9B59B6",
+          "roughness": 0.1,
+          "metalness": 0.9
+        }
+      },
+      {
+        "id": "obstacle3_map3",
+        "type": "icosahedron",
+        "position": [
+          0,
+          0,
+          30
+        ],
+        "size": 4,
+        "material": {
+          "type": "standard",
+          "color": "#F1C40F",
+          "roughness": 0.3,
+          "metalness": 0.7
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "platform1_map3",
+        "type": "complex_moving",
+        "position": [
+          0,
+          0,
+          35
+        ],
+        "size": [
+          12,
+          0.5,
+          12
+        ],
+        "movement": {
+          "type": "spiral",
+          "range": [
+            5,
+            15
+          ],
+          "speed": 0.8,
+          "rotation": true
+        },
+        "material": {
+          "type": "standard",
+          "color": "#E67E22",
+          "roughness": 0.4,
+          "metalness": 0.6
+        }
+      },
+      {
+        "id": "platform2_map3",
+        "type": "teleporting",
+        "position": [
+          35,
+          0,
+          0
+        ],
+        "size": [
+          8,
+          0.5,
+          8
+        ],
+        "teleportPoints": [
+          [
+            35,
+            3,
+            0
+          ],
+          [
+            -35,
+            3,
+            0
+          ],
+          [
+            0,
+            3,
+            35
+          ],
+          [
+            0,
+            3,
+            -35
+          ]
+        ],
+        "teleportInterval": 8,
+        "material": {
+          "type": "standard",
+          "color": "#3498DB",
+          "roughness": 0.2,
+          "metalness": 0.8
+        }
+      }
+    ],
+    "objects": []
+  },
+  "npcs": [
+    {
+      "id": "npc_30_1",
+      "name": "Charlotte",
+      "connectionId": "agonizes",
+      "dialogId": "dialog_30_1",
+      "position": [
+        -7,
+        0,
+        9
+      ],
+      "route": [
+        [
+          20,
+          0,
+          -11
+        ],
+        [
+          -20,
+          0,
+          1
+        ],
+        [
+          -9,
+          0,
+          4
+        ],
+        [
+          12,
+          0,
+          -22
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Mescaline!",
+      "color": "#0e5c01",
+      "modelURL": "/persons/BaseCharacter.gltf",
+      "map": 30,
+      "prerequisiteNpcId": null,
+      "unlocksMapId": "11"
+    },
+    {
+      "id": "npc_30_2",
+      "name": "Lucas",
+      "connectionId": "found_in",
+      "dialogId": "dialog_30_2",
+      "position": [
+        19,
+        0,
+        2
+      ],
+      "route": [
+        [
+          -25,
+          0,
+          1
+        ],
+        [
+          -10,
+          0,
+          14
+        ],
+        [
+          15,
+          0,
+          -28
+        ],
+        [
+          21,
+          0,
+          -17
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Mescaline!",
+      "color": "#44e4db",
+      "modelURL": "/persons/BlueSoldier_Male.gltf",
+      "map": 30,
+      "prerequisiteNpcId": "npc_30_1",
+      "unlocksMapId": "17"
+    },
+    {
+      "id": "npc_30_3",
+      "name": "Amelia",
+      "connectionId": "found_in",
+      "dialogId": "dialog_30_3",
+      "position": [
+        -11,
+        0,
+        15
+      ],
+      "route": [
+        [
+          25,
+          0,
+          20
+        ],
+        [
+          10,
+          0,
+          18
+        ],
+        [
+          9,
+          0,
+          13
+        ],
+        [
+          -21,
+          0,
+          3
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Mescaline!",
+      "color": "#631ee1",
+      "modelURL": "/persons/Casual2_Male.gltf",
+      "map": 30,
+      "prerequisiteNpcId": "npc_30_2",
+      "unlocksMapId": "26"
+    },
+    {
+      "id": "npc_30_4",
+      "name": "Henry",
+      "connectionId": "used_in",
+      "dialogId": "dialog_30_4",
+      "position": [
+        -12,
+        0,
+        -2
+      ],
+      "route": [
+        [
+          18,
+          0,
+          -25
+        ],
+        [
+          29,
+          0,
+          11
+        ],
+        [
+          18,
+          0,
+          -14
+        ],
+        [
+          -7,
+          0,
+          -13
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Mescaline!",
+      "color": "#d2a637",
+      "modelURL": "/persons/Casual3_Female.gltf",
+      "map": 30,
+      "prerequisiteNpcId": "npc_30_3",
+      "unlocksMapId": "23"
+    },
+    {
+      "id": "npc_30_5",
+      "name": "Harper",
+      "connectionId": "agonizes",
+      "dialogId": "dialog_30_5",
+      "position": [
+        0,
+        0,
+        -11
+      ],
+      "route": [
+        [
+          25,
+          0,
+          -16
+        ],
+        [
+          -28,
+          0,
+          -10
+        ],
+        [
+          -6,
+          0,
+          5
+        ],
+        [
+          29,
+          0,
+          -14
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Mescaline!",
+      "color": "#556c49",
+      "modelURL": "/persons/Casual3_Male.gltf",
+      "map": 30,
+      "prerequisiteNpcId": "npc_30_4",
+      "unlocksMapId": "3"
+    },
+    {
+      "id": "npc_30_6",
+      "name": "Alexander",
+      "connectionId": "both_phenethylamines",
+      "dialogId": "dialog_30_6",
+      "position": [
+        11,
+        0,
+        14
+      ],
+      "route": [
+        [
+          -2,
+          0,
+          -7
+        ],
+        [
+          -21,
+          0,
+          -1
+        ],
+        [
+          -16,
+          0,
+          -1
+        ],
+        [
+          -3,
+          0,
+          -27
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Mescaline!",
+      "color": "#9e5d99",
+      "modelURL": "/persons/Chef_Female.gltf",
+      "map": 30,
+      "prerequisiteNpcId": "npc_30_5",
+      "unlocksMapId": "27"
+    },
+    {
+      "id": "npc_30_7",
+      "name": "Evelyn",
+      "connectionId": "both_phenethylamines",
+      "dialogId": "dialog_30_7",
+      "position": [
+        11,
+        0,
+        8
+      ],
+      "route": [
+        [
+          21,
+          0,
+          6
+        ],
+        [
+          -21,
+          0,
+          12
+        ],
+        [
+          27,
+          0,
+          -11
+        ],
+        [
+          -17,
+          0,
+          9
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Mescaline!",
+      "color": "#ee1853",
+      "modelURL": "/persons/Cowboy_Female.gltf",
+      "map": 30,
+      "prerequisiteNpcId": "npc_30_6",
+      "unlocksMapId": "2"
+    },
+    {
+      "id": "npc_30_8",
+      "name": "Sebastian",
+      "connectionId": "both_phenethylamines",
+      "dialogId": "dialog_30_8",
+      "position": [
+        -5,
+        0,
+        -12
+      ],
+      "route": [
+        [
+          27,
+          0,
+          -24
+        ],
+        [
+          7,
+          0,
+          11
+        ],
+        [
+          22,
+          0,
+          -24
+        ],
+        [
+          -7,
+          0,
+          12
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Mescaline!",
+      "color": "#94f9ac",
+      "modelURL": "/persons/Cowboy_Male.gltf",
+      "map": 30,
+      "prerequisiteNpcId": "npc_30_7",
+      "unlocksMapId": "27"
+    }
+  ],
+  "playerStartPosition": [
+    0,
+    1,
+    0
+  ],
+  "cameraStartPosition": [
+    0,
+    5,
+    10
+  ],
+  "cameraStartTarget": [
+    0,
+    1,
+    0
+  ]
+}

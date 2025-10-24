@@ -1,0 +1,567 @@
+{
+  "worldName": "Beeard graph surfer",
+  "description": "Explore the interconnected world of psychedelic compounds and their relationships",
+  "maps": [
+    {
+      "id": "1",
+      "name": "Psilocybin",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.5, 
+        "phi": 0.21,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "2",
+      "name": "2C-B",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.43,
+        "phi": 0.25,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "3",
+      "name": "5-HT2A receptor",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.549,
+        "phi": 0.11,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "4",
+      "name": "5-MeO-DMT",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.601,
+        "phi": 0.289,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "5",
+      "name": "AL-LAD",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.32,
+        "phi": 0.28,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "6",
+      "name": "Anadenanthera peregrina",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.7,
+        "phi": 0.21,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "7",
+      "name": "BDNF",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.23,
+        "phi": 0.2,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "8",
+      "name": "Banisteriopsis caapi",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.55,
+        "phi": 0.26,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "9",
+      "name": "Bwiti religion iboga initiation practices",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.8,
+        "phi": 0.2,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "10",
+      "name": "DMT",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.62,
+        "phi": 0.17,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "11",
+      "name": "5-HT1A receptor",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.725,
+        "phi": 0.4,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "12",
+      "name": "Incilius alvarius",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.6,
+        "phi": 0.401,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "13",
+      "name": "Default Mode Network",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.28,
+        "phi": 0.16,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "14",
+      "name": "Diplopterys cabrerana",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.755,
+        "phi": 0.14,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "15",
+      "name": "SERT",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.425,
+        "phi": 0.374,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "16",
+      "name": "Mimosa tenuiflora",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.45,
+        "phi": 0.07,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "17",
+      "name": "Echinopsis spp. cacti",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.693,
+        "phi": 0.339,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "18",
+      "name": "MAO-A",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.38,
+        "phi": 0.2,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "19",
+      "name": "Ego dissolution",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.69,
+        "phi": 0.26,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "20",
+      "name": "Native American Church",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.531,
+        "phi": 0.41,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "21",
+      "name": "Harmaline",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 1.1,
+        "phi": 0.05,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "22",
+      "name": "Harmine",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.62,
+        "phi": 0.23,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "23",
+      "name": "Huichol peyote ceremonies",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.294,
+        "phi": 0.381,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "24",
+      "name": "Ibogaine",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 1.1,
+        "phi": 0.2,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "25",
+      "name": "LSD",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.4,
+        "phi": 0.27,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "26",
+      "name": "Lophophora williamsii",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.5,
+        "phi": 0.34,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "27",
+      "name": "MDA",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.812,
+        "phi": 0.084,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "28",
+      "name": "MDMA",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.48,
+        "phi": 0.28,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "29",
+      "name": "Mesoamerican mushroom rituals",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.0,
+        "phi": 0.0,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "30",
+      "name": "Mescaline",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.806,
+        "phi": 0.35,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "31",
+      "name": "Microdosing movement",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.25,
+        "phi": 0.25,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "32",
+      "name": "Neuroplasticity",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.38,
+        "phi": 0.135,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "33",
+      "name": "Phenethylamine",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.4,
+        "phi": 0.33,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "34",
+      "name": "Mammals",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.224,
+        "phi": 0.12,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "35",
+      "name": "Peganum harmala",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.939,
+        "phi": 0.177,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "36",
+      "name": "Psilocin",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.17,
+        "phi": 0.25,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "37",
+      "name": "Psilocybe mushrooms (genus)",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.482,
+        "phi": 0.15,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "38",
+      "name": "Ayahuasca brew",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.809,
+        "phi": 0.3,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "39",
+      "name": "Psychedelic Renaissance",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.142,
+        "phi": 0.173,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "40",
+      "name": "Psychedelic-assisted therapy FDA trials",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.3,
+        "phi": 0.21,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "41",
+      "name": "Psychotria viridis",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.75,
+        "phi": 0.28,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "42",
+      "name": "Santo Daime & União do Vegetal",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.9,
+        "phi": 0.37,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "43",
+      "name": "Serotonin",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.8,
+        "phi": 0.24,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "44",
+      "name": "Shipibo-Conibo plant medicine",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.24,
+        "phi": 0.3,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "45",
+      "name": "Sigma-1 receptor",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.714,
+        "phi": 0.05,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "46",
+      "name": "Synesthesia induction",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.55,
+        "phi": 0.35,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "47",
+      "name": "THH",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.088,
+        "phi": 0.1,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "48",
+      "name": "Tabernanthe iboga",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 1,
+        "phi": 0.12,
+        "altitude": 0.007
+      }
+    },
+    {
+      "id": "49",
+      "name": "Time perception distortion",
+      "model": {
+        "url": "/island_1-1.glb",
+        "scale": 0.04,
+        "theta": 0.287,
+        "phi": 0.32,
+        "altitude": 0.0055
+      }
+    },
+    {
+      "id": "50",
+      "name": "Wachuma rituals",
+      "model": {
+        "url": "/island_1-2.glb",
+        "scale": 0.12,
+        "theta": 0.6,
+        "phi": 0.35,
+        "altitude": 0.013
+      }
+    },
+    {
+      "id": "51",
+      "name": "Yopo/Cebil snuff rituals",
+      "model": {
+        "url": "/island_1-3.glb",
+        "scale": 0.04,
+        "theta": 0.9,
+        "phi": 0.28,
+        "altitude": 0.007
+      }
+    }
+  ]
+}

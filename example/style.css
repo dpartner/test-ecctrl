@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body,
 #root {
@@ -18,6 +22,7 @@ body,
   -webkit-user-select: none;
   -ms-user-select: none;
   touch-action: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .controlKeys {
@@ -62,4 +67,35 @@ body,
   .title {
     display: none;
   }
+}
+
+/* Animation for Person text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.person-text {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.person-text.fade-out {
+  animation: fadeOut 0.3s ease-out;
 }

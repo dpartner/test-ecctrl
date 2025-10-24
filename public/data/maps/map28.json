@@ -1,0 +1,448 @@
+{
+  "mapId": "28",
+  "npcUnlockMode": "independent",
+  "environment": {
+    "skybox": {
+      "type": "gradient",
+      "colors": [
+        "#87CEEB",
+        "#E0F6FF"
+      ]
+    },
+    "lighting": {
+      "ambient": {
+        "intensity": 0.4,
+        "color": "#ffffff"
+      },
+      "directional": {
+        "intensity": 0.8,
+        "color": "#ffffff",
+        "position": [
+          10,
+          10,
+          5
+        ],
+        "castShadow": true
+      }
+    },
+    "fog": {
+      "enabled": false,
+      "color": "#87CEEB",
+      "near": 50,
+      "far": 200
+    }
+  },
+  "terrain": {
+    "ground": {
+      "type": "plane",
+      "size": [
+        300,
+        5,
+        300
+      ],
+      "position": [
+        0,
+        -3.5,
+        0
+      ],
+      "material": {
+        "type": "standard",
+        "color": "#8FBC8F"
+      },
+      "textureUrl": "/textures/grass_green.png"
+    },
+    "obstacles": [
+      {
+        "id": "obstacle1",
+        "type": "cube",
+        "position": [
+          10,
+          0,
+          10
+        ],
+        "size": [
+          2,
+          2,
+          2
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#8B4513",
+          "roughness": 0.9
+        }
+      },
+      {
+        "id": "obstacle2",
+        "type": "sphere",
+        "position": [
+          -10,
+          0,
+          -10
+        ],
+        "radius": 1.5,
+        "material": {
+          "type": "standard",
+          "color": "#4682B4",
+          "roughness": 0.3
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "platform1",
+        "type": "floating",
+        "position": [
+          6,
+          -1.1,
+          20
+        ],
+        "size": [
+          20,
+          0.5,
+          8
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#00f2ff",
+          "roughness": 0.5
+        }
+      },
+      {
+        "id": "platform2",
+        "type": "floating",
+        "position": [
+          6,
+          -1.15,
+          20
+        ],
+        "size": [
+          22,
+          0.5,
+          10
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#c29967",
+          "roughness": 0.5
+        }
+      }
+    ],
+    "objects": [
+      {
+        "id": "object1",
+        "type": "house",
+        "position": [
+          -10,
+          2,
+          10
+        ],
+        "scale": 5,
+        "modelURL": "/house.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "object2",
+        "type": "tree",
+        "position": [
+          -4,
+          5,
+          10
+        ],
+        "scale": 5,
+        "modelURL": "/tree.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "object3",
+        "type": "surfboard",
+        "position": [
+          -6.65,
+          -0.6,
+          20
+        ],
+        "scale": 0.1,
+        "modelURL": "/surfboard.glb",
+        "rotation": [
+          1.57,
+          0.9,
+          0
+        ]
+      },
+      {
+        "id": "object4",
+        "type": "umbrella",
+        "position": [
+          -7,
+          0,
+          20
+        ],
+        "scale": 5,
+        "modelURL": "/umbrella.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "npcs": [
+    {
+      "id": "npc_28_1",
+      "name": "Sophia",
+      "connectionId": "enhances",
+      "dialogId": "dialog_28_1",
+      "position": [
+        -20,
+        0,
+        -18
+      ],
+      "route": [
+        [
+          -23,
+          0,
+          15
+        ],
+        [
+          23,
+          0,
+          -3
+        ],
+        [
+          -27,
+          0,
+          28
+        ],
+        [
+          -22,
+          0,
+          29
+        ]
+      ],
+      "text": "Hello! I'm an explorer of MDMA!",
+      "color": "#22e7d3",
+      "modelURL": "/persons/BaseCharacter.gltf",
+      "map": 28,
+      "prerequisiteNpcId": null,
+      "unlocksMapId": "32"
+    },
+    {
+      "id": "npc_28_2",
+      "name": "James",
+      "connectionId": "related_compound",
+      "dialogId": "dialog_28_2",
+      "position": [
+        -16,
+        0,
+        2
+      ],
+      "route": [
+        [
+          10,
+          0,
+          -13
+        ],
+        [
+          -14,
+          0,
+          -1
+        ],
+        [
+          -19,
+          0,
+          25
+        ],
+        [
+          -29,
+          0,
+          -10
+        ]
+      ],
+      "text": "Hello! I'm an explorer of MDMA!",
+      "color": "#e926a8",
+      "modelURL": "/persons/BlueSoldier_Male.gltf",
+      "map": 28,
+      "prerequisiteNpcId": "npc_28_1",
+      "unlocksMapId": "27"
+    },
+    {
+      "id": "npc_28_3",
+      "name": "Isabella",
+      "connectionId": "releases",
+      "dialogId": "dialog_28_3",
+      "position": [
+        16,
+        0,
+        2
+      ],
+      "route": [
+        [
+          -11,
+          0,
+          -23
+        ],
+        [
+          19,
+          0,
+          -24
+        ],
+        [
+          21,
+          0,
+          -24
+        ],
+        [
+          -10,
+          0,
+          20
+        ]
+      ],
+      "text": "Hello! I'm an explorer of MDMA!",
+      "color": "#50fd89",
+      "modelURL": "/persons/Casual2_Male.gltf",
+      "map": 28,
+      "prerequisiteNpcId": "npc_28_2",
+      "unlocksMapId": "43"
+    },
+    {
+      "id": "npc_28_4",
+      "name": "William",
+      "connectionId": "affects",
+      "dialogId": "dialog_28_4",
+      "position": [
+        -5,
+        0,
+        -15
+      ],
+      "route": [
+        [
+          26,
+          0,
+          17
+        ],
+        [
+          -7,
+          0,
+          -15
+        ],
+        [
+          -5,
+          0,
+          -28
+        ],
+        [
+          -26,
+          0,
+          9
+        ]
+      ],
+      "text": "Hello! I'm an explorer of MDMA!",
+      "color": "#b69233",
+      "modelURL": "/persons/Casual3_Female.gltf",
+      "map": 28,
+      "prerequisiteNpcId": "npc_28_3",
+      "unlocksMapId": "15"
+    },
+    {
+      "id": "npc_28_5",
+      "name": "Mia",
+      "connectionId": "both_phenethylamines",
+      "dialogId": "dialog_28_5",
+      "position": [
+        -11,
+        0,
+        10
+      ],
+      "route": [
+        [
+          -23,
+          0,
+          19
+        ],
+        [
+          5,
+          0,
+          28
+        ],
+        [
+          0,
+          0,
+          18
+        ],
+        [
+          16,
+          0,
+          -24
+        ]
+      ],
+      "text": "Hello! I'm an explorer of MDMA!",
+      "color": "#10f6e1",
+      "modelURL": "/persons/Casual3_Male.gltf",
+      "map": 28,
+      "prerequisiteNpcId": "npc_28_4",
+      "unlocksMapId": "30"
+    },
+    {
+      "id": "npc_28_6",
+      "name": "Benjamin",
+      "connectionId": "both_phenethylamines",
+      "dialogId": "dialog_28_6",
+      "position": [
+        8,
+        0,
+        7
+      ],
+      "route": [
+        [
+          18,
+          0,
+          27
+        ],
+        [
+          -29,
+          0,
+          18
+        ],
+        [
+          -26,
+          0,
+          0
+        ],
+        [
+          -23,
+          0,
+          -21
+        ]
+      ],
+      "text": "Hello! I'm an explorer of MDMA!",
+      "color": "#853ae2",
+      "modelURL": "/persons/Chef_Female.gltf",
+      "map": 28,
+      "prerequisiteNpcId": "npc_28_5",
+      "unlocksMapId": "2"
+    }
+  ],
+  "playerStartPosition": [
+    0,
+    1,
+    0
+  ],
+  "cameraStartPosition": [
+    0,
+    5,
+    10
+  ],
+  "cameraStartTarget": [
+    0,
+    1,
+    0
+  ]
+}

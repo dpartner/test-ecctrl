@@ -1,0 +1,526 @@
+{
+  "mapId": "1",
+  "npcUnlockMode": "independent",
+  "environment": {
+    "skybox": {
+      "type": "gradient",
+      "colors": [
+        "#87CEEB",
+        "#E0F6FF"
+      ]
+    },
+    "lighting": {
+      "ambient": {
+        "intensity": 0.4,
+        "color": "#ffffff"
+      },
+      "directional": {
+        "intensity": 0.8,
+        "color": "#ffffff",
+        "position": [
+          10,
+          10,
+          5
+        ],
+        "castShadow": true
+      }
+    },
+    "fog": {
+      "enabled": false,
+      "color": "#87CEEB",
+      "near": 50,
+      "far": 200
+    }
+  },
+  "terrain": {
+    "ground": {
+      "type": "plane",
+      "size": [
+        300,
+        5,
+        300
+      ],
+      "position": [
+        0,
+        -3.5,
+        0
+      ],
+      "material": {
+        "type": "standard",
+        "color": "#8FBC8F"
+      },
+      "textureUrl": "/textures/grass_green.png"
+    },
+    "obstacles": [
+      {
+        "id": "obstacle1",
+        "type": "cube",
+        "position": [
+          10,
+          0,
+          10
+        ],
+        "size": [
+          2,
+          2,
+          2
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#8B4513",
+          "roughness": 0.9
+        }
+      },
+      {
+        "id": "obstacle2",
+        "type": "sphere",
+        "position": [
+          -10,
+          0,
+          -10
+        ],
+        "radius": 1.5,
+        "material": {
+          "type": "standard",
+          "color": "#4682B4",
+          "roughness": 0.3
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "platform1",
+        "type": "floating",
+        "position": [
+          6,
+          -1.1,
+          20
+        ],
+        "size": [
+          20,
+          0.5,
+          8
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#00f2ff",
+          "roughness": 0.5
+        }
+      },
+      {
+        "id": "platform2",
+        "type": "floating",
+        "position": [
+          6,
+          -1.15,
+          20
+        ],
+        "size": [
+          22,
+          0.5,
+          10
+        ],
+        "material": {
+          "type": "standard",
+          "color": "#c29967",
+          "roughness": 0.5
+        }
+      }
+    ],
+    "objects": [
+      {
+        "id": "object1",
+        "type": "house",
+        "position": [
+          -10,
+          2,
+          10
+        ],
+        "scale": 5,
+        "modelURL": "/house.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "object2",
+        "type": "tree",
+        "position": [
+          -4,
+          5,
+          10
+        ],
+        "scale": 5,
+        "modelURL": "/tree.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "object3",
+        "type": "surfboard",
+        "position": [
+          -6.65,
+          -0.6,
+          20
+        ],
+        "scale": 0.1,
+        "modelURL": "/surfboard.glb",
+        "rotation": [
+          1.57,
+          0.9,
+          0
+        ]
+      },
+      {
+        "id": "object4",
+        "type": "umbrella",
+        "position": [
+          -7,
+          0,
+          20
+        ],
+        "scale": 5,
+        "modelURL": "/umbrella.glb",
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  "npcs": [
+    {
+      "id": "npc_1_1",
+      "name": "Clara",
+      "connectionId": "metabolizes_to",
+      "dialogId": "dialog_1_1",
+      "position": [
+        16,
+        0,
+        -7
+      ],
+      "route": [
+        [
+          -4,
+          0,
+          6
+        ],
+        [
+          -19,
+          0,
+          -7
+        ],
+        [
+          1,
+          0,
+          -11
+        ],
+        [
+          -1,
+          0,
+          1
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Psilocybin!",
+      "color": "#fe5029",
+      "modelURL": "/persons/BaseCharacter.gltf",
+      "map": 1,
+      "prerequisiteNpcId": null,
+      "unlocksMapId": "36"
+    },
+    {
+      "id": "npc_1_2",
+      "name": "John",
+      "connectionId": "found_in",
+      "dialogId": "dialog_1_2",
+      "position": [
+        1,
+        0,
+        -11
+      ],
+      "route": [
+        [
+          -27,
+          0,
+          23
+        ],
+        [
+          5,
+          0,
+          25
+        ],
+        [
+          17,
+          0,
+          -6
+        ],
+        [
+          -21,
+          0,
+          -13
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Psilocybin!",
+      "color": "#f3217c",
+      "modelURL": "/persons/BlueSoldier_Male.gltf",
+      "map": 1,
+      "prerequisiteNpcId": "npc_1_1",
+      "unlocksMapId": "37"
+    },
+    {
+      "id": "npc_1_3",
+      "name": "Lucy",
+      "connectionId": "enhances",
+      "dialogId": "dialog_1_3",
+      "position": [
+        -17,
+        0,
+        0
+      ],
+      "route": [
+        [
+          15,
+          0,
+          -5
+        ],
+        [
+          -4,
+          0,
+          12
+        ],
+        [
+          -28,
+          0,
+          -5
+        ],
+        [
+          7,
+          0,
+          -23
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Psilocybin!",
+      "color": "#eef219",
+      "modelURL": "/persons/Casual2_Male.gltf",
+      "map": 1,
+      "prerequisiteNpcId": "npc_1_2",
+      "unlocksMapId": "32"
+    },
+    {
+      "id": "npc_1_4",
+      "name": "Marcus",
+      "connectionId": "suppresses",
+      "dialogId": "dialog_1_4",
+      "position": [
+        0,
+        0,
+        -7
+      ],
+      "route": [
+        [
+          -24,
+          0,
+          -29
+        ],
+        [
+          -24,
+          0,
+          21
+        ],
+        [
+          30,
+          0,
+          -25
+        ],
+        [
+          -9,
+          0,
+          -25
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Psilocybin!",
+      "color": "#092004",
+      "modelURL": "/persons/Casual3_Female.gltf",
+      "map": 1,
+      "prerequisiteNpcId": "npc_1_3",
+      "unlocksMapId": "13"
+    },
+    {
+      "id": "npc_1_5",
+      "name": "Emma",
+      "connectionId": "associated_with",
+      "dialogId": "dialog_1_5",
+      "position": [
+        0,
+        0,
+        -16
+      ],
+      "route": [
+        [
+          18,
+          0,
+          -17
+        ],
+        [
+          -28,
+          0,
+          -28
+        ],
+        [
+          -27,
+          0,
+          21
+        ],
+        [
+          24,
+          0,
+          4
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Psilocybin!",
+      "color": "#fa57c2",
+      "modelURL": "/persons/Casual3_Male.gltf",
+      "map": 1,
+      "prerequisiteNpcId": "npc_1_4",
+      "unlocksMapId": "19"
+    },
+    {
+      "id": "npc_1_6",
+      "name": "Oliver",
+      "connectionId": "used_in",
+      "dialogId": "dialog_1_6",
+      "position": [
+        7,
+        0,
+        20
+      ],
+      "route": [
+        [
+          7,
+          0,
+          21
+        ],
+        [
+          11,
+          0,
+          -11
+        ],
+        [
+          -12,
+          0,
+          12
+        ],
+        [
+          -18,
+          0,
+          13
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Psilocybin!",
+      "color": "#bcca47",
+      "modelURL": "/persons/Chef_Female.gltf",
+      "map": 1,
+      "prerequisiteNpcId": "npc_1_5",
+      "unlocksMapId": "31"
+    },
+    {
+      "id": "npc_1_7",
+      "name": "Sophia",
+      "connectionId": "studied_in",
+      "dialogId": "dialog_1_7",
+      "position": [
+        17,
+        0,
+        3
+      ],
+      "route": [
+        [
+          -28,
+          0,
+          -10
+        ],
+        [
+          14,
+          0,
+          -2
+        ],
+        [
+          15,
+          0,
+          -15
+        ],
+        [
+          -4,
+          0,
+          29
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Psilocybin!",
+      "color": "#d0970b",
+      "modelURL": "/persons/Cowboy_Female.gltf",
+      "map": 1,
+      "prerequisiteNpcId": "npc_1_6",
+      "unlocksMapId": "40"
+    },
+    {
+      "id": "npc_1_8",
+      "name": "James",
+      "connectionId": "both_tryptamines",
+      "dialogId": "dialog_1_8",
+      "position": [
+        13,
+        0,
+        7
+      ],
+      "route": [
+        [
+          -23,
+          0,
+          27
+        ],
+        [
+          -3,
+          0,
+          13
+        ],
+        [
+          -5,
+          0,
+          24
+        ],
+        [
+          28,
+          0,
+          21
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Psilocybin!",
+      "color": "#5768a6",
+      "modelURL": "/persons/Cowboy_Male.gltf",
+      "map": 1,
+      "prerequisiteNpcId": "npc_1_7",
+      "unlocksMapId": "10"
+    }
+  ],
+  "playerStartPosition": [
+    0,
+    1,
+    0
+  ],
+  "cameraStartPosition": [
+    0,
+    5,
+    10
+  ],
+  "cameraStartTarget": [
+    0,
+    1,
+    0
+  ]
+}

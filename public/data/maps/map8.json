@@ -1,0 +1,278 @@
+{
+  "mapId": "8",
+  "npcUnlockMode": "independent",
+  "environment": {
+    "skybox": {
+      "type": "gradient",
+      "colors": [
+        "#FF6B6B",
+        "#4ECDC4"
+      ]
+    },
+    "lighting": {
+      "ambient": {
+        "intensity": 0.3,
+        "color": "#ffffff"
+      },
+      "directional": {
+        "intensity": 1,
+        "color": "#FFD93D",
+        "position": [
+          15,
+          15,
+          10
+        ],
+        "castShadow": true
+      }
+    },
+    "fog": {
+      "enabled": true,
+      "color": "#FF6B6B",
+      "near": 30,
+      "far": 150
+    }
+  },
+  "terrain": {
+    "ground": {
+      "type": "plane",
+      "size": [
+        300,
+        5,
+        300
+      ],
+      "position": [
+        0,
+        -3.5,
+        0
+      ],
+      "material": {
+        "type": "standard",
+        "color": "#556B2F",
+        "roughness": 0.9,
+        "metalness": 0.2
+      },
+      "textureUrl": "/textures/grass_green.png"
+    },
+    "obstacles": [
+      {
+        "id": "obstacle1_map2",
+        "type": "cylinder",
+        "position": [
+          13,
+          0,
+          20
+        ],
+        "radius": 2,
+        "height": 4,
+        "material": {
+          "type": "standard",
+          "color": "#ff0000",
+          "roughness": 0.7
+        }
+      },
+      {
+        "id": "obstacle2_map2",
+        "type": "torus",
+        "position": [
+          -8,
+          -0.5,
+          -10
+        ],
+        "radius": 3,
+        "tube": 0.5,
+        "material": {
+          "type": "standard",
+          "color": "#00ff00",
+          "roughness": 0.4
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "platform1_map2",
+        "type": "moving",
+        "position": [
+          -10,
+          0,
+          25
+        ],
+        "size": [
+          10,
+          0.5,
+          10
+        ],
+        "movement": {
+          "type": "vertical",
+          "range": [
+            2,
+            8
+          ],
+          "speed": 1
+        },
+        "material": {
+          "type": "standard",
+          "color": "#00ff00",
+          "roughness": 0.6
+        }
+      },
+      {
+        "id": "platform2_map2",
+        "type": "rotating",
+        "position": [
+          14,
+          0,
+          0
+        ],
+        "size": [
+          6,
+          0.5,
+          6
+        ],
+        "rotation": {
+          "axis": "y",
+          "speed": 0.5
+        },
+        "material": {
+          "type": "standard",
+          "color": "#ff0000",
+          "roughness": 0.5
+        }
+      }
+    ],
+    "objects": []
+  },
+  "npcs": [
+    {
+      "id": "npc_8_1",
+      "name": "Daniel",
+      "connectionId": "contains",
+      "dialogId": "dialog_8_1",
+      "position": [
+        -2,
+        0,
+        -10
+      ],
+      "route": [
+        [
+          -19,
+          0,
+          -12
+        ],
+        [
+          21,
+          0,
+          -13
+        ],
+        [
+          -27,
+          0,
+          16
+        ],
+        [
+          -30,
+          0,
+          -17
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Banisteriopsis caapi!",
+      "color": "#12cdb4",
+      "modelURL": "/persons/BaseCharacter.gltf",
+      "map": 8,
+      "prerequisiteNpcId": null,
+      "unlocksMapId": "47"
+    },
+    {
+      "id": "npc_8_2",
+      "name": "Sofia",
+      "connectionId": "contains",
+      "dialogId": "dialog_8_2",
+      "position": [
+        0,
+        0,
+        16
+      ],
+      "route": [
+        [
+          -16,
+          0,
+          15
+        ],
+        [
+          0,
+          0,
+          19
+        ],
+        [
+          17,
+          0,
+          11
+        ],
+        [
+          -24,
+          0,
+          -18
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Banisteriopsis caapi!",
+      "color": "#8b7a04",
+      "modelURL": "/persons/BlueSoldier_Male.gltf",
+      "map": 8,
+      "prerequisiteNpcId": "npc_8_1",
+      "unlocksMapId": "22"
+    },
+    {
+      "id": "npc_8_3",
+      "name": "Matthew",
+      "connectionId": "contains",
+      "dialogId": "dialog_8_3",
+      "position": [
+        -6,
+        0,
+        -10
+      ],
+      "route": [
+        [
+          8,
+          0,
+          23
+        ],
+        [
+          26,
+          0,
+          20
+        ],
+        [
+          -6,
+          0,
+          3
+        ],
+        [
+          -3,
+          0,
+          -7
+        ]
+      ],
+      "text": "Hello! I'm an explorer of Banisteriopsis caapi!",
+      "color": "#f02384",
+      "modelURL": "/persons/Casual2_Male.gltf",
+      "map": 8,
+      "prerequisiteNpcId": "npc_8_2",
+      "unlocksMapId": "47"
+    }
+  ],
+  "playerStartPosition": [
+    0,
+    1,
+    0
+  ],
+  "cameraStartPosition": [
+    0,
+    5,
+    10
+  ],
+  "cameraStartTarget": [
+    0,
+    1,
+    0
+  ]
+}

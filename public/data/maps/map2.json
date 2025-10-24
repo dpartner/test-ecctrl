@@ -1,0 +1,395 @@
+{
+  "mapId": "2",
+  "npcUnlockMode": "independent",
+  "environment": {
+    "skybox": {
+      "type": "gradient",
+      "colors": [
+        "#FF6B6B",
+        "#4ECDC4"
+      ]
+    },
+    "lighting": {
+      "ambient": {
+        "intensity": 0.3,
+        "color": "#ffffff"
+      },
+      "directional": {
+        "intensity": 1,
+        "color": "#FFD93D",
+        "position": [
+          15,
+          15,
+          10
+        ],
+        "castShadow": true
+      }
+    },
+    "fog": {
+      "enabled": true,
+      "color": "#FF6B6B",
+      "near": 30,
+      "far": 150
+    }
+  },
+  "terrain": {
+    "ground": {
+      "type": "plane",
+      "size": [
+        300,
+        5,
+        300
+      ],
+      "position": [
+        0,
+        -3.5,
+        0
+      ],
+      "material": {
+        "type": "standard",
+        "color": "#556B2F",
+        "roughness": 0.9,
+        "metalness": 0.2
+      },
+      "textureUrl": "/textures/grass_green.png"
+    },
+    "obstacles": [
+      {
+        "id": "obstacle1_map2",
+        "type": "cylinder",
+        "position": [
+          13,
+          0,
+          20
+        ],
+        "radius": 2,
+        "height": 4,
+        "material": {
+          "type": "standard",
+          "color": "#ff0000",
+          "roughness": 0.7
+        }
+      },
+      {
+        "id": "obstacle2_map2",
+        "type": "torus",
+        "position": [
+          -8,
+          -0.5,
+          -10
+        ],
+        "radius": 3,
+        "tube": 0.5,
+        "material": {
+          "type": "standard",
+          "color": "#00ff00",
+          "roughness": 0.4
+        }
+      }
+    ],
+    "platforms": [
+      {
+        "id": "platform1_map2",
+        "type": "moving",
+        "position": [
+          -10,
+          0,
+          25
+        ],
+        "size": [
+          10,
+          0.5,
+          10
+        ],
+        "movement": {
+          "type": "vertical",
+          "range": [
+            2,
+            8
+          ],
+          "speed": 1
+        },
+        "material": {
+          "type": "standard",
+          "color": "#00ff00",
+          "roughness": 0.6
+        }
+      },
+      {
+        "id": "platform2_map2",
+        "type": "rotating",
+        "position": [
+          14,
+          0,
+          0
+        ],
+        "size": [
+          6,
+          0.5,
+          6
+        ],
+        "rotation": {
+          "axis": "y",
+          "speed": 0.5
+        },
+        "material": {
+          "type": "standard",
+          "color": "#ff0000",
+          "roughness": 0.5
+        }
+      }
+    ],
+    "objects": []
+  },
+  "npcs": [
+    {
+      "id": "npc_2_1",
+      "name": "Isabella",
+      "connectionId": "inspired_by",
+      "dialogId": "dialog_2_1",
+      "position": [
+        -17,
+        0,
+        -9
+      ],
+      "route": [
+        [
+          9,
+          0,
+          27
+        ],
+        [
+          -29,
+          0,
+          -25
+        ],
+        [
+          -13,
+          0,
+          4
+        ],
+        [
+          23,
+          0,
+          -15
+        ]
+      ],
+      "text": "Hello! I'm an explorer of 2C-B!",
+      "color": "#8fa1a4",
+      "modelURL": "/persons/BaseCharacter.gltf",
+      "map": 2,
+      "prerequisiteNpcId": null,
+      "unlocksMapId": "30"
+    },
+    {
+      "id": "npc_2_2",
+      "name": "William",
+      "connectionId": "chemical_class",
+      "dialogId": "dialog_2_2",
+      "position": [
+        -16,
+        0,
+        -18
+      ],
+      "route": [
+        [
+          -2,
+          0,
+          28
+        ],
+        [
+          -22,
+          0,
+          19
+        ],
+        [
+          -23,
+          0,
+          -26
+        ],
+        [
+          14,
+          0,
+          -29
+        ]
+      ],
+      "text": "Hello! I'm an explorer of 2C-B!",
+      "color": "#8f0687",
+      "modelURL": "/persons/BlueSoldier_Male.gltf",
+      "map": 2,
+      "prerequisiteNpcId": "npc_2_1",
+      "unlocksMapId": "33"
+    },
+    {
+      "id": "npc_2_3",
+      "name": "Mia",
+      "connectionId": "agonizes",
+      "dialogId": "dialog_2_3",
+      "position": [
+        -1,
+        0,
+        -12
+      ],
+      "route": [
+        [
+          7,
+          0,
+          -22
+        ],
+        [
+          28,
+          0,
+          -28
+        ],
+        [
+          -7,
+          0,
+          -14
+        ],
+        [
+          -10,
+          0,
+          7
+        ]
+      ],
+      "text": "Hello! I'm an explorer of 2C-B!",
+      "color": "#9b0f0a",
+      "modelURL": "/persons/Casual2_Male.gltf",
+      "map": 2,
+      "prerequisiteNpcId": "npc_2_2",
+      "unlocksMapId": "3"
+    },
+    {
+      "id": "npc_2_4",
+      "name": "Benjamin",
+      "connectionId": "both_phenethylamines",
+      "dialogId": "dialog_2_4",
+      "position": [
+        -11,
+        0,
+        -15
+      ],
+      "route": [
+        [
+          -23,
+          0,
+          25
+        ],
+        [
+          7,
+          0,
+          -3
+        ],
+        [
+          26,
+          0,
+          21
+        ],
+        [
+          -19,
+          0,
+          -3
+        ]
+      ],
+      "text": "Hello! I'm an explorer of 2C-B!",
+      "color": "#83c0f7",
+      "modelURL": "/persons/Casual3_Female.gltf",
+      "map": 2,
+      "prerequisiteNpcId": "npc_2_3",
+      "unlocksMapId": "27"
+    },
+    {
+      "id": "npc_2_5",
+      "name": "Charlotte",
+      "connectionId": "both_phenethylamines",
+      "dialogId": "dialog_2_5",
+      "position": [
+        -18,
+        0,
+        -10
+      ],
+      "route": [
+        [
+          30,
+          0,
+          -22
+        ],
+        [
+          21,
+          0,
+          2
+        ],
+        [
+          23,
+          0,
+          22
+        ],
+        [
+          8,
+          0,
+          -21
+        ]
+      ],
+      "text": "Hello! I'm an explorer of 2C-B!",
+      "color": "#9a6d39",
+      "modelURL": "/persons/Casual3_Male.gltf",
+      "map": 2,
+      "prerequisiteNpcId": "npc_2_4",
+      "unlocksMapId": "30"
+    },
+    {
+      "id": "npc_2_6",
+      "name": "Lucas",
+      "connectionId": "both_phenethylamines",
+      "dialogId": "dialog_2_6",
+      "position": [
+        19,
+        0,
+        3
+      ],
+      "route": [
+        [
+          20,
+          0,
+          -18
+        ],
+        [
+          -21,
+          0,
+          -1
+        ],
+        [
+          -1,
+          0,
+          24
+        ],
+        [
+          30,
+          0,
+          16
+        ]
+      ],
+      "text": "Hello! I'm an explorer of 2C-B!",
+      "color": "#f3961e",
+      "modelURL": "/persons/Chef_Female.gltf",
+      "map": 2,
+      "prerequisiteNpcId": "npc_2_5",
+      "unlocksMapId": "27"
+    }
+  ],
+  "playerStartPosition": [
+    0,
+    1,
+    0
+  ],
+  "cameraStartPosition": [
+    0,
+    5,
+    10
+  ],
+  "cameraStartTarget": [
+    0,
+    1,
+    0
+  ]
+}
