@@ -294,6 +294,7 @@ const animationSet = {
     };
 ```
 
+
 3. In `CharacterController.jsx`, initialize the trigger function and call it when needed:
 
 ```js

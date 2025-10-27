@@ -7,6 +7,7 @@ export default {
   plugins: [react()],
   root: "example/",
   publicDir: "../public/",
+  envDir: "../",
   base: "./",
   server: {
     host: true,

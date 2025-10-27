@@ -10,6 +10,7 @@ import { useDialogs } from "../stores/useDialogs";
 import { useUI } from "../stores/useUI";
 import { useDevSettings } from "../stores/useDevSettings";
 import CharacterModel from "./CharacterModel";
+import { IsProduction } from "../utils/client";
 
 export default function Game() {
   const { currentMap, setBackButton, initializeLoadingTracker, resetLoadingTracker, startGame } = useUI();
@@ -67,7 +68,7 @@ export default function Game() {
 
   return (
     <>
-        <Perf position="bottom-left" />
+        {!IsProduction && <Perf position="bottom-left" />}
         {/* Grid */}
         {showGrid && (
           <Grid

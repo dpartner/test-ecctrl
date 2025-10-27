@@ -34,7 +34,7 @@ const MovingCones = ({ start, end, status, sourceMapId, targetMapId }: {
     }
     
     const baseRadius = CONNECTION_THICKNESS[status];
-    const geometry = new THREE.ConeGeometry(baseRadius, 0.3, 10);
+    const geometry = new THREE.ConeGeometry(baseRadius, 0.3, 6);
     coneGeometryCache.set(status, geometry);
     return geometry;
   }, [status]);
@@ -53,7 +53,7 @@ const MovingCones = ({ start, end, status, sourceMapId, targetMapId }: {
     return material;
   }, [status]);
 
-  const coneSpacing = 0.04;
+  const coneSpacing = 0.15;
   const distance = start.distanceTo(end);
   
   // Determine if this is an incoming or outgoing connection

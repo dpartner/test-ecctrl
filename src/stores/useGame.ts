@@ -4,163 +4,211 @@ import { subscribeWithSelector } from "zustand/middleware";
 
 export const useGame = /* @__PURE__ */ create(
   /* @__PURE__ */ subscribeWithSelector<State>((set, get) => {
-    return {
-      /**
-       * Point to move point
-       */
-      moveToPoint: null as THREE.Vector3 | null,
+  return {
+    /**
+     * Point to move point
+     */
+    moveToPoint: null as THREE.Vector3 | null,
 
-      /**
-       * Character animations state manegement
-       */
-      // Initial animation
-      curAnimation: null as string | null,
-      animationSet: {} as AnimationSet,
+    /**
+     * Player position for interaction
+     */
+    playerPosition: null as THREE.Vector3 | null,
+    nearNPC: false as boolean,
 
-      initializeAnimationSet: (animationSet: AnimationSet) => {
-        set((state) => {
-          if (Object.keys(state.animationSet).length === 0) {
-            return { animationSet };
-          }
-          return {};
-        });
-      },
+    /**
+     * Camera positions for dialog
+     */
+    cameraPos: null as { x: number; y: number; z: number } | null,
+    cameraTarget: null as { x: number; y: number; z: number } | null,
 
-      reset: () => {
-        set((state) => {
+    /**
+     * Character animations state manegement
+     */
+    // Initial animation
+    curAnimation: null as string | null,
+    animationSet: {} as AnimationSet,
+
+    initializeAnimationSet: (animationSet: AnimationSet) => {
+      set((state) => {
+        if (Object.keys(state.animationSet).length === 0) {
+          return { animationSet };
+        }
+        return {};
+      });
+    },
+
+    reset: () => {
+      set((state) => {
+        console.log('Resetting animation', state.animationSet.idle);
+        return { curAnimation: state.animationSet.idle };
+      });
+    },
+
+    idle: () => {
+      set((state) => {
+        if (state.curAnimation === state.animationSet.jumpIdle) {
+          return { curAnimation: state.animationSet.jumpLand };
+        } else if (
+          state.curAnimation !== state.animationSet.action1 &&
+          state.curAnimation !== state.animationSet.action2 &&
+          state.curAnimation !== state.animationSet.action3 &&
+          state.curAnimation !== state.animationSet.action4
+        ) {
           return { curAnimation: state.animationSet.idle };
-        });
-      },
+        }
+        return {};
+      });
+    },
 
-      idle: () => {
-        set((state) => {
-          if (state.curAnimation === state.animationSet.jumpIdle) {
-            return { curAnimation: state.animationSet.jumpLand };
-          } else if (
-            state.curAnimation !== state.animationSet.action1 &&
-            state.curAnimation !== state.animationSet.action2 &&
-            state.curAnimation !== state.animationSet.action3 &&
-            state.curAnimation !== state.animationSet.action4
-          ) {
-            return { curAnimation: state.animationSet.idle };
-          }
-          return {};
-        });
-      },
+    walk: () => {
+      set((state) => {
+        if (state.curAnimation !== state.animationSet.action4) {
+          return { curAnimation: state.animationSet.walk };
+        }
+        return {};
+      });
+    },
 
-      walk: () => {
-        set((state) => {
-          if (state.curAnimation !== state.animationSet.action4) {
-            return { curAnimation: state.animationSet.walk };
-          }
-          return {};
-        });
-      },
+    run: () => {
+      set((state) => {
+        if (state.curAnimation !== state.animationSet.action4) {
+          return { curAnimation: state.animationSet.run };
+        }
+        return {};
+      });
+    },
 
-      run: () => {
-        set((state) => {
-          if (state.curAnimation !== state.animationSet.action4) {
-            return { curAnimation: state.animationSet.run };
-          }
-          return {};
-        });
-      },
+    jump: () => {
+      set((state) => {
+        return { curAnimation: state.animationSet.jump };
+      });
+    },
 
-      jump: () => {
-        set((state) => {
-          return { curAnimation: state.animationSet.jump };
-        });
-      },
+    jumpIdle: () => {
+      set((state) => {
+        if (state.curAnimation === state.animationSet.jump) {
+          return { curAnimation: state.animationSet.jumpIdle };
+        }
+        return {};
+      });
+    },
 
-      jumpIdle: () => {
-        set((state) => {
-          if (state.curAnimation === state.animationSet.jump) {
-            return { curAnimation: state.animationSet.jumpIdle };
-          }
-          return {};
-        });
-      },
+    jumpLand: () => {
+      set((state) => {
+        if (state.curAnimation === state.animationSet.jumpIdle) {
+          return { curAnimation: state.animationSet.jumpLand };
+        }
+        return {};
+      });
+    },
 
-      jumpLand: () => {
-        set((state) => {
-          if (state.curAnimation === state.animationSet.jumpIdle) {
-            return { curAnimation: state.animationSet.jumpLand };
-          }
-          return {};
-        });
-      },
+    fall: () => {
+      set((state) => {
+        return { curAnimation: state.animationSet.fall };
+      });
+    },
 
-      fall: () => {
-        set((state) => {
-          return { curAnimation: state.animationSet.fall };
-        });
-      },
+    action1: () => {
+      set((state) => {
+        if (state.curAnimation === state.animationSet.idle) {
+          return { curAnimation: state.animationSet.action1 };
+        }
+        return {};
+      });
+    },
 
-      action1: () => {
-        set((state) => {
-          if (state.curAnimation === state.animationSet.idle) {
-            return { curAnimation: state.animationSet.action1 };
-          }
-          return {};
-        });
-      },
+    action2: () => {
+      set((state) => {
+        if (state.curAnimation === state.animationSet.idle) {
+          return { curAnimation: state.animationSet.action2 };
+        }
+        return {};
+      });
+    },
 
-      action2: () => {
-        set((state) => {
-          if (state.curAnimation === state.animationSet.idle) {
-            return { curAnimation: state.animationSet.action2 };
-          }
-          return {};
-        });
-      },
+    action3: () => {
+      set((state) => {
+        if (state.curAnimation === state.animationSet.idle) {
+          return { curAnimation: state.animationSet.action3 };
+        }
+        return {};
+      });
+    },
 
-      action3: () => {
-        set((state) => {
-          if (state.curAnimation === state.animationSet.idle) {
-            return { curAnimation: state.animationSet.action3 };
-          }
-          return {};
-        });
-      },
+    action4: () => {
+      set((state) => {
+        if (
+          state.curAnimation === state.animationSet.idle ||
+          state.curAnimation === state.animationSet.walk ||
+          state.curAnimation === state.animationSet.run
+        ) {
+          return { curAnimation: state.animationSet.action4 };
+        }
+        return {};
+      });
+    },
 
-      action4: () => {
-        set((state) => {
-          if (
-            state.curAnimation === state.animationSet.idle ||
-            state.curAnimation === state.animationSet.walk ||
-            state.curAnimation === state.animationSet.run
-          ) {
-            return { curAnimation: state.animationSet.action4 };
-          }
-          return {};
-        });
-      },
+    /**
+     * Additional animations
+     */
+    // triggerFunction: ()=>{
+    //    set((state) => {
+    //        return { curAnimation: state.animationSet.additionalAnimation };
+    //    });
+    // }
 
-      /**
-       * Additional animations
-       */
-      // triggerFunction: ()=>{
-      //    set((state) => {
-      //        return { curAnimation: state.animationSet.additionalAnimation };
-      //    });
-      // }
+    /**
+     * Set/get point to move point
+     */
+    setMoveToPoint: (point: THREE.Vector3 | null) => {
+      set(() => {
+        return { moveToPoint: point };
+      });
+    },
 
-      /**
-       * Set/get point to move point
-       */
-      setMoveToPoint: (point: THREE.Vector3 | null) => {
-        set(() => {
-          return { moveToPoint: point };
-        });
-      },
+    getMoveToPoint: () => {
+      return {
+        moveToPoint: get().moveToPoint,
+      };
+    },
 
-      getMoveToPoint: () => {
-        return {
-          moveToPoint: get().moveToPoint,
-        };
-      },
-    };
-  })
+    /**
+     * Set player position for interaction
+     */
+    setPlayerPosition: (position: THREE.Vector3 | null) => {
+      set(() => {
+        return { playerPosition: position };
+      });
+    },
+
+    setNearNPC: (near: boolean) => {
+      set(() => {
+        return { nearNPC: near };
+      });
+    },
+
+    getNearNPC: () => {
+      return { nearNPC: get().nearNPC };
+    },
+
+    /**
+     * Set camera positions for dialog
+     */
+    setCameraPos: (pos: { x: number; y: number; z: number } | null) => {
+      set(() => {
+        return { cameraPos: pos };
+      });
+    },
+
+    setCameraTarget: (target: { x: number; y: number; z: number } | null) => {
+      set(() => {
+        return { cameraTarget: target };
+      });
+    },
+
+  };
+})
 );
 
 export type AnimationSet = {
@@ -180,6 +228,10 @@ export type AnimationSet = {
 
 type State = {
   moveToPoint: THREE.Vector3 | null;
+  playerPosition: THREE.Vector3 | null;
+  nearNPC: boolean;
+  cameraPos: { x: number; y: number; z: number } | null;
+  cameraTarget: { x: number; y: number; z: number } | null;
   curAnimation: string | null;
   animationSet: AnimationSet;
   initializeAnimationSet: (animationSet: AnimationSet) => void;
@@ -188,6 +240,13 @@ type State = {
   getMoveToPoint: () => {
     moveToPoint: THREE.Vector3 | null;
   };
+  setPlayerPosition: (position: THREE.Vector3 | null) => void;
+  setNearNPC: (near: boolean) => void;
+  getNearNPC: () => {
+    nearNPC: boolean;
+  };
+  setCameraPos: (pos: { x: number; y: number; z: number } | null) => void;
+  setCameraTarget: (target: { x: number; y: number; z: number } | null) => void;
 } & {
   [key in keyof AnimationSet]: () => void;
 };

@@ -6,6 +6,7 @@
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "target": "ESNext",
+    "module": "ESNext",
     "verbatimModuleSyntax": true,
     "strict": true,
     "emitDeclarationOnly": true,
@@ -15,5 +16,5 @@
     "declaration": true,
     "lib": ["es2022", "dom"]
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "example/hooks/useReownOpenWallet.ts", "example/hooks/useCameraControl.tsx", "example/vite-env.d.ts", "example/index.tsx"]
 }

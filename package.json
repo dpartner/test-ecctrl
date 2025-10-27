@@ -67,6 +67,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc",
-    "preview": "vite preview"
+    "preview": "vite preview --outDir example/exampleDist"
   }
 }

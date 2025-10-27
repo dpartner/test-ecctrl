@@ -1,5 +1,5 @@
 import { SPHERE_RADIUS } from "../LevelMenuIslands";
-import React, { useRef } from "react";
+import React, { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import CustomShaderMaterial from "three-custom-shader-material";
@@ -16,6 +16,15 @@ const TEXTURE_SIZE = 10; // min: 1 , max: 80
 // Stylized Ocean Sphere Component with custom shader
 export default function OceanSphere() {
   const materialRef = useRef<THREE.ShaderMaterial>(null);
+  
+  // Memoize uniforms to prevent material recreation on every render
+  const uniforms = useMemo(() => ({
+    uTime: { value: 0 },
+    uColorFar: { value: COLOR_BASE_FAR },
+    uWaveSpeed: { value: WAVE_SPEED },
+    uWaveAmplitude: { value: WAVE_AMPLITUDE },
+    uTextureSize: { value: TEXTURE_SIZE },
+  }), []);
   
   // Update shader time
   useFrame(({ clock }) => {
@@ -40,13 +49,7 @@ export default function OceanSphere() {
         baseMaterial={THREE.MeshStandardMaterial}
         vertexShader={vertexShader}
         fragmentShader={fragmentShader}
-        uniforms={{
-          uTime: { value: 0 },
-          uColorFar: { value: COLOR_BASE_FAR },
-          uWaveSpeed: { value: WAVE_SPEED },
-          uWaveAmplitude: { value: WAVE_AMPLITUDE },
-          uTextureSize: { value: TEXTURE_SIZE },
-        }}
+        uniforms={uniforms}
         color={COLOR_BASE_NEAR}
         transparent
         side={THREE.DoubleSide}

@@ -4,6 +4,7 @@ import BackButton from "./ui/BackButton";
 import DevMenu from "./ui/DevMenu";
 import LevelMenuIslands from "./LevelMenuIslands";  
 import LoadingTracker from "./ui/LoadingTracker";
+import { IsProduction } from "../utils/client";
 
 const UI = () => {
   const { currentMap, setCurrentMap, backButton, loadingTracker, resetLoadingTracker, startGame, setStartGame } = useUI();
@@ -29,7 +30,7 @@ const UI = () => {
     return (
       <>
         <LevelMenuIslands onMapSelect={handleMapSelect} />
-        <DevMenu top={true} />
+        {!IsProduction && <DevMenu top={true} />}
       </>
     );
   }
@@ -37,7 +38,7 @@ const UI = () => {
     return (
       <>
         <BackButton handleBack={handleBackToMenu} />
-        <DevMenu top={false} />
+        {!IsProduction && <DevMenu top={false} />}
       </>
     );
   }

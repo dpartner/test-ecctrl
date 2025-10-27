@@ -1,5 +1,7 @@
 const reownProjectId = import.meta.env.VITE_REOWN_PROJECT_ID;
 const authApi = import.meta.env.VITE_API!;
+const isProduction = import.meta.env.MODE === 'production';
+console.log('isProduction', isProduction);
 
 
 if (!reownProjectId) {
@@ -11,4 +13,5 @@ if (!authApi) {
 
 export const ReownProjectId = reownProjectId;
 export const AuthApi = authApi;
+export const IsProduction = isProduction;
 

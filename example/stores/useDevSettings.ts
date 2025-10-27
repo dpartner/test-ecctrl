@@ -11,7 +11,7 @@ interface DevSettings {
   showPersonRoute: boolean;
   connectionLinesMode: ConnectionLinesMode;
   allNpcIndependent: boolean;
-  showConnectionName: boolean; // true - показувати connection name, false - показувати NPC name
+  showConnectionName: boolean;
   toggleGrid: () => void;
   togglePersonRoute: () => void;
   toggleConnectionLinesMode: () => void;
@@ -24,9 +24,9 @@ export const useDevSettings = create<DevSettings>()(
     (set) => ({
       showGrid: true,
       showPersonRoute: true,
-      connectionLinesMode: ConnectionLinesMode.ALL,
+      connectionLinesMode: ConnectionLinesMode.HOVER,
       allNpcIndependent: false,
-      showConnectionName: true, // За замовчуванням показуємо connection name
+      showConnectionName: true,
       toggleGrid: () => set((state) => ({ showGrid: !state.showGrid })),
       togglePersonRoute: () => set((state) => ({ showPersonRoute: !state.showPersonRoute })),
       toggleConnectionLinesMode: () => set((state) => ({

@@ -14,6 +14,7 @@ import { preloadConnectionNames } from "../utils/connectionNames";
 import { LoginState, useAuth } from "../stores/useAuth";
 import { useReownOpenWallet } from "../hooks/useReownOpenWallet";
 import { Perf } from "r3f-perf";
+import { IsProduction } from "../utils/client";
 
 export const SPHERE_RADIUS = 50;
 
@@ -135,7 +136,7 @@ export default function LevelMenuIslands({ onMapSelect }: LevelMenuIslandsProps)
         }}
         style={{ width: '100%', height: '100%' }}
       >
-        <Perf position="bottom-left" />
+        {!IsProduction && <Perf position="bottom-left" />}
         <MenuSky />
         
         
